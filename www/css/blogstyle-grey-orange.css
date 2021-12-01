@@ -1,0 +1,52 @@
+body {
+    background-color: #202020;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: #fda553;
+    text-shadow: 2px 2px black;
+    font-family: Times New Roman;
+}
+
+h2 {
+    color: #ffa500;
+    text-shadow: 1px 1px black;
+    font-family: Times New Roman;
+}
+
+h3 {
+    color: #ffa500;
+    font-family: Times New Roman;
+}
+
+p {
+    color: #ffeedd;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+li, ul, ol, table {
+    color: #ffeedd;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+a {
+    color: #add8e6;
+}
+
+a:active {
+    color: #e6adbc;
+}
+
+a:focus {
+    color: #e6adbc;
+}
+
+a:visited {
+    color: #e6add8;
+}

@@ -1,0 +1,11 @@
+body 
+{
+	background-color: #131313;
+
+	color: #dddddd ;
+}
+
+@font-face {
+	  font-family: "Gentle Sans";
+	    src: url("fonts/gentle-sans.ttf") format("truetype");
+    }
