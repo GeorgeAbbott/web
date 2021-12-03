@@ -1,0 +1,11 @@
+server {
+    server_name hooks.sateoki.xyz
+
+    location / {
+        proxy_pass http://127.0.0.1:9000/hooks/;
+    }
+
+    listen 80 ;
+    listen [::]:80 ; 
+}
+

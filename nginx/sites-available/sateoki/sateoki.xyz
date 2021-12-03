@@ -1,0 +1,35 @@
+server {
+        server_name sateoki.xyz www.sateoki.xyz ;
+        root /var/www/sateoki/sateoki;
+        index index.html index.htm index.nginx-debian.html ;
+
+        location / {
+                try_files $uri $uri/ =404 ;
+        }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/sateoki.xyz/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/sateoki.xyz/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = sateoki.xyz) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    # Added manually to redirect www.sateoki.xyz to https
+    if ($host = www.sateoki.xyz) {
+        return 301 https://$host$request_uri;
+    }
+
+
+        listen 80 ;
+        listen [::]:80 ;
+        server_name sateoki.xyz www.sateoki.xyz ; # www.sateoki.xyz added manually
+    return 404; # managed by Certbot
+
+}
+
