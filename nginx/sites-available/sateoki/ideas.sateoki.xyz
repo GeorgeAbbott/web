@@ -1,0 +1,12 @@
+server {
+
+	server_name ideas.sateoki.xyz ;
+	root /var/www/sateoki/ideas;
+	index index.html index.htm index.nginx-debian.html ;
+
+	location / {
+		try_files $uri $uri/ =404 ;
+	}
+    listen 80 ; 
+    listen [::]:80 ; 
+}

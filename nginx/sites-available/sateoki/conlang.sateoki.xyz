@@ -1,0 +1,13 @@
+server {
+
+	server_name conlang.sateoki.xyz ;
+	root /var/www/sateoki/conlang;
+	index index.html index.htm index.nginx-debian.html ;
+
+	location / {
+		try_files $uri $uri/ =404 ;
+	}
+
+    listen 80 ; 
+    listen [::]:80 ; 
+}
