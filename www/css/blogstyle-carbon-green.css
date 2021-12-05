@@ -1,1 +1,52 @@
-/* TBA - purple theme */
+body {
+    background-color: #0c1013;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: #0ecc16;
+    text-shadow: 2px 2px black;
+    font-family: Times New Roman;
+}
+
+h2 {
+    color: #a5ff00;
+    text-shadow: 1px 1px black;
+    font-family: Times New Roman;
+}
+
+h3 {
+    color: #a5ff00;
+    font-family: Times New Roman;
+}
+
+p {
+    color: #ddffcc;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+li, ul, ol, table {
+    color: #ddffcc;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+a {
+    color: #9dd8c6;
+}
+
+a:active {
+    color: #9dd8b6;
+}
+
+a:focus {
+    color: #9dd8b6;
+}
+
+a:visited {
+    color: #9dd8b6;
+}
