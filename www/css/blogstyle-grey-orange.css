@@ -3,26 +3,26 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    font-family: Liberation Sans, sans-serif;
+    font-family: "Liberation Sans", sans-serif;
     font-size: 14 px;
 }
 
 h1 {
     color: #fda553;
     text-shadow: 2px 2px black;
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", serif;
     font-size: 16 px;
 }
 
 h2 {
     color: #ffa500;
     text-shadow: 1px 1px black;
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", serif;
 }
 
 h3 {
     color: #ffa500;
-    font-family: Times New Roman, serif;
+    font-family: "Times New Roman", serif;
 }
 
 p {
