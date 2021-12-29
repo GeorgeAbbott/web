@@ -1,0 +1,14 @@
+server {
+
+	server_name comp.sateoki.xyz ;
+	root /var/www/sateoki/comp;
+	index index.html index.htm index.nginx-debian.html ;
+
+	location / {
+		try_files $uri $uri/ =404 ;
+	} 
+
+    listen 80 ; 
+    listen [::]:80 ; 
+
+}
