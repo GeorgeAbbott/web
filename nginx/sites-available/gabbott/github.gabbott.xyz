@@ -2,7 +2,7 @@ server {
 
 	server_name github.gabbott.xyz ;
 
-    return 301 https://github.com/GeorgeAbbott
+    return 301 https://github.com/GeorgeAbbott ;
 
     listen 80 ; 
     listen [::]:80 ;
