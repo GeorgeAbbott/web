@@ -12,12 +12,14 @@ h1 {
     text-shadow: 2px 2px black;
     font-family: serif;
     font-size: 16 px;
+    text-align: center;
 }
 
 h2 {
     color: #ffa500;
     text-shadow: 1px 1px black;
     font-family: serif;
+    text-align: left;
 }
 
 h3 {
@@ -29,15 +31,37 @@ p {
     color: #ffeedd;
     margin-left: 20px;
     margin-right: 20px;
+    text-align: left;
 }
 
-li, ul, ol, table {
+/* For Tables */
+li, ul, ol, table, th {
     color: #ffeedd;
     margin-left: 20px;
     margin-right: 20px;
+    text-align: left;
+    border-spacing: 10px 10px;
 }
 
+/* Underline Table Headers */
+.header {
+    text-decoration: underline;
+}
 
+.leftmost-column {
+    text-decoration: italic ; /* maybe find a better decoration? */
+}
+    
+/* Headers and Footers */
+header, footer {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+}
+
+/* Hyperlinks */
 a {
     color: #add8e6;
 }
@@ -118,4 +142,8 @@ a:visited {
 
 .align-left {
     text-align: left 
+}
+
+.align-center {
+    text-align: center;
 }
