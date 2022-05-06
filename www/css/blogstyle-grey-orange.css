@@ -1,5 +1,5 @@
 body {
-    background-color: #202020;
+    background-color: #151515;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -37,10 +37,11 @@ p {
 /* For Tables */
 li, ul, ol, table, th {
     color: #ffeedd;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px; */  
+    /* margin-right: 20px;*/ 
     text-align: left;
-    border-spacing: 10px 10px;
+    /* border-spacing: 10px 10px; */
+    font-weight: normal;
 }
 
 /* Underline Table Headers */
@@ -48,7 +49,15 @@ li, ul, ol, table, th {
     text-decoration: underline;
 }
 
-.leftmost-column {
+tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+tr:hover {
+    background-color: #232323; 
+}
+
+.italic {
     text-decoration: italic ; /* maybe find a better decoration? */
 }
     
@@ -81,7 +90,7 @@ a:visited {
 /* Navigation Bar */
 .navbar {
     overflow: hidden;
-    background-color: #202020; 
+    background-color: #151515; 
 }
 
 .dropdown {
@@ -125,7 +134,7 @@ a:visited {
 
 .dropdown-content a {
     float: none; 
-    background-color: #202020; /* bg */
+    background-color: #181818; /* bg */
     padding: 12px 16px;
     text-decoration: none; 
     display: block; 
@@ -141,7 +150,7 @@ a:visited {
 }
 
 .align-left {
-    text-align: left 
+    text-align: left;
 }
 
 .align-center {
