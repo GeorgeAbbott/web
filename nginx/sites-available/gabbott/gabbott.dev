@@ -1,6 +1,6 @@
 server {
         server_name gabbott.dev www.gabbott.dev ;
-        root /var/www/gabbott/gabbott;
+        root /var/www/gabbott.dev/gabbott.dev;
         index index.html index.htm index.nginx-debian.html ;
 
         location / {
