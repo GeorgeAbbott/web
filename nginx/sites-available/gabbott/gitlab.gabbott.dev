@@ -1,0 +1,10 @@
+server {
+
+	server_name gitlab.gabbott.dev;
+
+    return 301 https://gitlab.com/GeorgeAbbott ;
+
+    listen 80 ; 
+    listen [::]:80 ; 
+
+}

@@ -1,0 +1,10 @@
+server {
+
+	server_name origin.gabbott.dev ;
+
+    return 301 https://git.gabbott.dev/self;
+
+    listen 80 ; 
+    listen [::]:80;
+
+}
