@@ -1,4 +1,5 @@
 #!/bin/sh
+# Run this, e.g. update-navbar.sh gabbott.dev.
 
 
 DELIMITER_BEG="<!-- nbbeg:ver0 -->"
