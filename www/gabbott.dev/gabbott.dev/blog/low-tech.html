@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Inconvenience and Low Technology</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Inconvenience and Low Technology</h1>
+<p>
+On my main machine, I have a fairly bloated install of Artix Linux. For all
+what Arch-based distros are supposed to be minimal, I have somehow ended up in
+a state where neofetch reports 1719 packages, many of which granted can
+probably be removed, and my system is very fancy, but also very fragile. 
+</p>
+
+<p>
+My editor is <code>neovim</code>. But not just neovim. I have all sorts of
+LSPs and other plug-ins and whatever else, probably a lot of which I do not
+really need.
+</p>
+
+<p>
+I got a laptop at the end of last year, and installed Artix on it. I intended
+it for working on various programming projects on-the-go, for instance on
+trains or maybe at the park. It's had a variety of operating systems now on it,
+from Artix, to OpenBSD, to DragonFlyBSD (which I tried out, but found annoying
+to use) and then back to OpenBSD now, where I think I will stay for good. 
+</p>
+
+<p>
+With this laptop, I have decided not to install anything too fancy on it. It
+has <code>neovim</code>, but no LSPs, no fancy plug-ins, nothing. Just plain
+old neovim with an at-the-moment
+<a href="https://git.gabbott.dev/george/obsddf/src/branch/master/init.vim">
+eight-line long vimrc.</a>
+Similarly, I am sticking to <code>ksh</code>, and hoping I can catch some parts
+of my scripts on Arch that are not POSIX-compliant. I already caught something
+when I began to use <code>csh</code> on DragonFlyBSD, and found out it does not
+even support functions, so I had to move all of the functions I had in my
+<code>.zshrc</code> into separate script files. And with OpenBSD, I have
+recently found that all my scripts that use <code>date -d</code> don't work on
+BSD, as <code>-d</code> is a GNU extension. Still not sure how to work around
+that, but I will figure it out. 
+</p>
+
+<p>
+But the most important part is, I think by installing all these fancy-dan
+tools, code completion and the like, whilst it does help at first, it also
+means you <em>don't learn these things on your own</em>. If you rely on code
+completion to tell you the names of the functions you want to use, then when
+you don't have it, you'll be back and forth to the manpages. You get a less
+complete understanding. 
+</p>
+
+<p>
+I realise this in language learning as well. There are so many apps and
+programs and courses and all which purport to teach you a language. Use Babbel
+and it will teach you &lt;insert language here&gt; with simple (and also
+useless, but they don't tell you that) sentences. But it doesn't help you in
+the real world. It is painful, but a part of getting a good understanding of a
+language is just to do the to-normal-people-unenjoyable bit, and sit down, and
+study the grammar. Painful maybe, but where you actually learn. 
+</p>
+
+<p>
+I think a similar thing applies here. If I want to get better at programming,
+or at scripting, or at whatever, I just have to sit through the pain of going
+"oh, what was that function called again" and remember to make notes when I do
+find it to spare myself searching for it again. But the act of doing that
+searching means it will really stick in my mind. 
+</p>
+
+<p>
+I know a similar point was said by Jonathon Blow on 
+<a href="https://invidio.us/watch?v=ZSRHeXYDLko">his talk on the end of
+civilisation. </a> The perk of using, say, Python over C++, or C++ over
+Assembly, is that you gain efficiency. Of course we don't want to always write
+everything in Assembly, it's so difficult, and we want to have code that is the
+same over all architectures! And of course we don't want to have to manually
+manage memory or deal with writing <code>std::unique_ptr</code> everywhere,
+that's such a hassle! But the downside is, once you stop doing these things, if
+you aren't careful, you will forget how to do them.
+</p>
+
+<p>
+Another reason is, I find the high-tech actually gets on my nerves most of the
+time. For instance, writing this, I wanted to go back to add in
+<code>&lt;code&gt;</code> and <code>&lt;a href&gt;</code> blocks. But every
+time I do this, <code>neovim</code> automatically adds in the closing block as
+well, e.g. adds in the <code>&lt;/code&gt;</code>. This would normally be
+helpful, but when the inner contents of the block already exists, it adds the
+block <em>before</em> the contents, so I have to go delete it and retype it
+after the contents. I know that I have a plug-in which has some keybinding to
+add in surround blocks like this, but I can't remember the keybinding, so I'll
+have to go fish through their documentation. Whereas really, I would be most
+happy if it just <em>did nothing.</em> It's sometimes helpful, but just as
+often a hindrance. 
+</p>
+
+<p>
+It also makes me more impatient I notice. I use <code>zoxide</code>, which is
+like a fancier <code>cd</code>, and remembers directories you have been to so
+you can go there before. I have it aliased to <code>cd</code> for convenience.
+But sometimes I type a directory, and it takes me to the wrong one! So I type 
+<code>cdi</code> and find the right one, but I notice I come out considerably
+more annoyed. Where in reality, if I just had the simpler, "slower"
+<code>cd</code>, sure, I might have had to type out the full directory name.
+But I get there either way, and I'm happier for it. 
+</p>
+
+<p>
+I realise that last point was a bit of a personal one, I am not saying never to
+use anything high-tech, but just to be aware of the effects. I am beginning to
+think that all this high-tech comes at a high cost too. You might get better
+efficiency, but this comes at the cost of skill and ability. Deeper knowledge
+becomes trivia. When "features" don't work, they slow you down even more than
+if you had never had them in the first place. 
+</p>
+
+<p>
+Generally, it is wise to be cautious about adding more on. Can this be done
+with what I already have? Do I really need this? Could a low-tech solution work
+as well as this high-tech solution? If so, I think it is well worth
+considering. 
+</p>
+
+<p> That's all. </p>
+</body>
