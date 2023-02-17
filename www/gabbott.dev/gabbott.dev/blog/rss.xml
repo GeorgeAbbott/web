@@ -13,6 +13,7 @@
 			<title>Some Notes on Ethical Quandries within Veganism</title>
 			<link>https://gabbott.dev/blog/veganism</link>
 			<guid>https://gabbott.dev/blog/veganism</guid>
+			<pubDate>2023-02-01</pubDate>
 			<description>
 &lt;p&gt;
 I have been a vegan since I was around ten, and was a vegetarian before that. 
@@ -186,6 +187,7 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
 			<title>Religions</title>
 			<link>https://gabbott.dev/blog/religions</link>
 			<guid>https://gabbott.dev/blog/religions</guid>
+			<pubDate>2021-11-23</pubDate>
 			<description>
 				
             &lt;p&gt;
@@ -330,7 +332,7 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
 		<item>
 			<title>/s/ and /r/ in Germanic</title>
 			<link>https://gabbott.dev/blog/s-r-germanic</link>
-			<!-- <pubDate></pubDate> -->
+			<pubDate>2021-11-13</pubDate> 
 			<guid>https://gabbott.dev/blog/s-r-germanic</guid>
 			<description>
 		<!-- Add content here in &lt;p&gt; blocks -->
