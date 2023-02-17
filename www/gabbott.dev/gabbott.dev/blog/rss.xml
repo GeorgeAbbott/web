@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 	<channel>
 		<title>George Abbott's Blog</title>
 		<link>https://gabbott.dev/blog</link>
 		<description>George Abbott's Blog</description>
 		<language>en-gb</language>
-		<atom:link href="https://gabbott.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
+		<link href="https://gabbott.dev/blog/rss.xml" rel="self" type="application/rss+xml"/>
 		<!-- Title; Link; Guid; Description; pubDate -->
 
 		<!-- Item -->
@@ -13,171 +14,170 @@
 			<link>https://gabbott.dev/blog/veganism</link>
 			<guid>https://gabbott.dev/blog/veganism</guid>
 			<description>
-<p>
+&lt;p&gt;
 I have been a vegan since I was around ten, and was a vegetarian before that. 
 However, in the past few years (~5 years) I've come to notice veganism is not 
 so simple as it may at first seem. Below are a few of my thoughts.
-</p>
-<h2>A General Course of Action</h2>
-<p>
+&lt;/p&gt;
+&lt;h2&gt;A General Course of Action&lt;/h2&gt;
+&lt;p&gt;
 With certain things in life it is hard to be certain of the view to take, and 
 what course of action is right. I believe an acceptable approach however, is 
-just to <i>take the best option you know of at the time</i>. For the veganism 
+just to &lt;i&gt;take the best option you know of at the time&lt;/i&gt;. For the veganism 
 case I can always be assured that, regardless of intricate differences, 
-something <i>akin to veganism</i> is more moral than eating factory farmed
+something &lt;i&gt;akin to veganism&lt;/i&gt; is more moral than eating factory farmed
 meat. And so basically, whilst the below will be arguing over specifics,
-<i>never make perfect the enemy of the good</i>.
-<h2>Veganism as simple abstinence from meat</h2>
-<p>
+&lt;i&gt;never make perfect the enemy of the good&lt;/i&gt;.
+&lt;h2&gt;Veganism as simple abstinence from meat&lt;/h2&gt;
+&lt;p&gt;
 The issue here is rather obvious. Generally, a vegan will be this way due to 
-ethical (<i>don't hurt the animals, dude</i>) or environmental (<i>save the
-planet, man</i>) reasons. However, there exist circumstances when eating meat
-may actually <i>help</i> the ethical or environmental situation. For instance,
-if a piece of meat is to be chucked away, eating it is <i>most</i> moral as it 
+ethical (&lt;i&gt;don't hurt the animals, dude&lt;/i&gt;) or environmental (&lt;i&gt;save the
+planet, man&lt;/i&gt;) reasons. However, there exist circumstances when eating meat
+may actually &lt;i&gt;help&lt;/i&gt; the ethical or environmental situation. For instance,
+if a piece of meat is to be chucked away, eating it is &lt;i&gt;most&lt;/i&gt; moral as it 
 means you will be fuller, thereby requiring fewer crops and saving on insect
 death (pesticide) and pollution (transport costs/fuel, etc.)
-</p>
-<p>
-From this we might think, <i>I will simply ony eat meat if specifically it is 
-going to go to waste. </i> More broadly than this, given that meat production 
+&lt;/p&gt;
+&lt;p&gt;
+From this we might think, &lt;i&gt;I will simply ony eat meat if specifically it is 
+going to go to waste. &lt;/i&gt; More broadly than this, given that meat production 
 is so much less moral than production of veg, it actually becomes a moral 
-imperative not just <i>not to eat meat</i>, but <i>to eat as much meat </i>(as 
-realistically possible)<i> that would have gone to waste otherwise</i>.
-</p>
-<p>Now, a quick thought experiment.</p>
-<h2>Ethical Meat</h2>
-<p>
+imperative not just &lt;i&gt;not to eat meat&lt;/i&gt;, but &lt;i&gt;to eat as much meat &lt;/i&gt;(as 
+realistically possible)&lt;i&gt; that would have gone to waste otherwise&lt;/i&gt;.
+&lt;/p&gt;
+&lt;p&gt;Now, a quick thought experiment.&lt;/p&gt;
+&lt;h2&gt;Ethical Meat&lt;/h2&gt;
+&lt;p&gt;
 Imagine we could produce meat in a way where there was no suffering (mentally,
 physically, etc.) to the animal, but which was still utterly terrible for the 
 environment.
-</p>
-<p>Would it be moral/good to consume this meat?</p>
-<p>
-I think generally, the inclination would be to say, <i>it is better, but still
-not perfect.</i> Not eating meat is not just about the suffering, it is also
+&lt;/p&gt;
+&lt;p&gt;Would it be moral/good to consume this meat?&lt;/p&gt;
+&lt;p&gt;
+I think generally, the inclination would be to say, &lt;i&gt;it is better, but still
+not perfect.&lt;/i&gt; Not eating meat is not just about the suffering, it is also
 about the environmental impact, perhaps. 
-</p>
-<p>(This assumes we are talking about a person who is vegan for ethical reasons
-primarily).</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;(This assumes we are talking about a person who is vegan for ethical reasons
+primarily).&lt;/p&gt;
+&lt;p&gt;
 In this case, we ought apply a similar logic to plants. There is evil in, for 
 instance, the emissions from the transport of fruit and veg. It behooves us to 
 also eat less in the way of shop-bought veg, and begin to grow our own. I think
 most people would agree this to be a good way but to say it is good yet not to
 practice it is just as bad as the 'I know eating meat is wrong, but just 
 chicken tastes soo good'-type meat eater.
-</p>
-<p>And talking of chicken...</p>
-<h2>The Egg Situation</h2>
-<p> How do we deal with eggs? </p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;And talking of chicken...&lt;/p&gt;
+&lt;h2&gt;The Egg Situation&lt;/h2&gt;
+&lt;p&gt; How do we deal with eggs? &lt;/p&gt;
+&lt;p&gt;
 We used to keep chickens, and I would eat their eggs. We would crush up the
 shells and feed it back to them after.
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 Given that we held these chickens, I know them to have had a decent quality of 
 life. The worst that happened to them was they might get a scare from the fox,
 and unfortunately one did get eaten by the fox. But they didn't get their 
 throats slit, and they got the whole garden to forage about for worms, or 
 dust-bathe. They had a decent life.
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 I don't think it was immoral to eat their eggs. I never ate an egg with the Red 
-Lion which certifies abuse. These were <i>real</i> eggs.
-</p>
-<p>
+Lion which certifies abuse. These were &lt;i&gt;real&lt;/i&gt; eggs.
+&lt;/p&gt;
+&lt;p&gt;
 Now, an abuse we did do was that we fed them worms and oyster shells and the 
 like. Technically no worse than feeding the cat, but even feeding the cat is 
 immoral in an indirect way. 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 Were we by proxy eating the worms and the oyster shells and so non-vegan? Sure, 
 but even then worms are so underdeveloped I don't think they really count as 
 non-vegan in the same way as a cow does. 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 The thing is, there is nigh on no suffering here. The chickens don't suffer any 
 real amount more than compared to their version of an idyllic life. The worms 
 and oysters that we by proxy ate are hardly sentient. And there are no major 
 transport costs, etc. except for the delivery of their food. This is no worse
 than shop-bought veg and the like.
-</p>
-<p>
-The only objection is to one of feeling: <i>I feel it is not right to eat
-eggs.</i> But as it goes, it is hardly wrong. Let's extend this talk past 
+&lt;/p&gt;
+&lt;p&gt;
+The only objection is to one of feeling: &lt;i&gt;I feel it is not right to eat
+eggs.&lt;/i&gt; But as it goes, it is hardly wrong. Let's extend this talk past 
 chickens now. 
-</p>
-<h2>Cow</h2>
-<p>
+&lt;/p&gt;
+&lt;h2&gt;Cow&lt;/h2&gt;
+&lt;p&gt;
 Say I kept a cow: I had ample land, and so allowed her to graze and roam some 
 decent-sized plot of it. She had a good life. Maybe I also keep some bulls, and 
 potentially breed her to be larger/more meaty, but not in a way where it makes 
 her life difficult. 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 When she has calves, I take some of her milk, but ensure never to take so much 
 the calves cannot suckle or at least have some to drink from a container.
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 Once she has reached a decent age, I lead her away from the plot she is 
 acquainted with and shoot her in the head. She dies instantly, without any pain
 whatever. There is no abbatoirish stench of blood or background squealing and 
 screaming and so she is prior to moment of death altogether unaware of the fate
 that would befall her in the coming moments. 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 This is perhaps the best situation I can think of. There is no suffering to the 
 animal, there is no real environmental concern any more than a cow existing 
 normally, it is seemingly completely fine. As if we have somehow combined these
 and made a meat which is acceptable to vegan ideas. Though of course any
 rightful vegan would reject this... 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 A first objection though is suffering is brought about to the calves who are 
 now without a mother. Presumably there would be other cows about and the calves
 would have grown up somewhat by the point you kill the cow. But either way, I 
 am not sure I have a good rebuttal to this idea. 
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 Another is that this treatment would still be murder if done to a human. This 
 is true, and again I am not sure about how to deal with this one. I
-<i>personally</i> feel there is a qualitative difference between human and 
+&lt;i&gt;personally&lt;/i&gt; feel there is a qualitative difference between human and 
 animal, and that, e.g. to kill a cow is graver than a spider, and graver still 
 is to kill a human, though whether to kill a human is really graver I am not
 sure. This is a difficult question, and this blog post is quite long already.
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 However I do just feel that this way of keeping animals, and also of killing 
 and eating them has a certain... quality to it. I call it that as I have 
-recently been reading Robert Pirsig who has a <i>metaphysics of Quality</i>,
+recently been reading Robert Pirsig who has a &lt;i&gt;metaphysics of Quality&lt;/i&gt;,
 but perhaps before I would have just called it respect for the animal, and for 
 the general world around.
-</p>
-<p>
+&lt;/p&gt;
+&lt;p&gt;
 The questions are difficult and I do not know the answers. I have been playing 
-recently in my head of <i>Quality</i> being the prime distinction, which makes 
+recently in my head of &lt;i&gt;Quality&lt;/i&gt; being the prime distinction, which makes 
 the obviously-ugly factory farm, which is entirely mechanical, and exists for a 
-singular reason (make more meat, more cheaply, at <i>any</i> cost), a purely 
+singular reason (make more meat, more cheaply, at &lt;i&gt;any&lt;/i&gt; cost), a purely 
 classical solution, and the romantic idea of eating only veg go together. We 
 can eat the meat, but only where it does not involve the abuse on the scale it
 does now, and where it is functioning alongside nature, not against it, in 
 defiance of it. 
-</p>
-<p>
-Yet this has issues of its own, and I am not really sure on this <i>Metaphysics 
-of Quality</i> yet. It feels and seems to be everso promising, but I have my 
+&lt;/p&gt;
+&lt;p&gt;
+Yet this has issues of its own, and I am not really sure on this &lt;i&gt;Metaphysics 
+of Quality&lt;/i&gt; yet. It feels and seems to be everso promising, but I have my 
 doubts still.
-</p>
-<p>
-So I return to the beginning. <i>Don't make perfect the enemy of the good</i>.
+&lt;/p&gt;
+&lt;p&gt;
+So I return to the beginning. &lt;i&gt;Don't make perfect the enemy of the good&lt;/i&gt;.
 Veganism (in some vague, nebulous, sense) is better than at least the 
 factory farming-esque meat that people have the initial visceral reaction 
 against, the ugly kind. It is more difficult getting into the weeds, and 
 dealing with what seems like a more beautiful way. And as for why or what 
 exactly is true? I don't know. I will likely never know. C'est la vie. 
-</p>
+&lt;/p&gt;
 			</description>
-			
 		</item>
 
 
@@ -188,127 +188,127 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
 			<guid>https://gabbott.dev/blog/religions</guid>
 			<description>
 				
-            <p>
+            &lt;p&gt;
             A thought popped into my head today: why do we say a person is 
-            <em>Jewish</em>, but that their religion is <em>Judaism</em>? After
-            all, whilst the <em>jew</em> and <em>juda</em> elements look 
+            &lt;em&gt;Jewish&lt;/em&gt;, but that their religion is &lt;em&gt;Judaism&lt;/em&gt;? After
+            all, whilst the &lt;em&gt;jew&lt;/em&gt; and &lt;em&gt;juda&lt;/em&gt; elements look 
             similar, they are definitely not the same, and from a first glance
             you cannot immediately tell the origin of them like you can with 
-            <em>Christian</em> and <em>Christianity</em>.
-            </p>
-            <p>
-            And similarly, a <em>muslim</em> is a believer in <em>Islam</em>.
+            &lt;em&gt;Christian&lt;/em&gt; and &lt;em&gt;Christianity&lt;/em&gt;.
+            &lt;/p&gt;
+            &lt;p&gt;
+            And similarly, a &lt;em&gt;muslim&lt;/em&gt; is a believer in &lt;em&gt;Islam&lt;/em&gt;.
             Hold on, these words are completely different! How is that the 
             case?
-            </p>
-            <p>
+            &lt;/p&gt;
+            &lt;p&gt;
             That is the topic I will write about today - names of religions.
             It is late in the day though, so I won't go too deep.
-            <p>
-        <h2>Judaism</h2>>
-            <p> 
+            &lt;p&gt;
+        &lt;h2&gt;Judaism&lt;/h2&gt;>
+            &lt;p&gt; 
             Firstly let's go over Judaism. As it turns out the difference here
             is just a simple matter of being worn out over time, and the words
             ultimately derive from the same place, which is the name Judah. 
             Quite simple. 
-            </p>
-        ><h2>Islam</h2>
-            <p>
-            The words <em>muslim</em> and <em>Islam</em> are quite a bit more 
+            &lt;/p&gt;
+        >&lt;h2&gt;Islam&lt;/h2&gt;
+            &lt;p&gt;
+            The words &lt;em&gt;muslim&lt;/em&gt; and &lt;em&gt;Islam&lt;/em&gt; are quite a bit more 
             interesting. In Semitic languages (e.g. Arabic), instead of all 
             grammar being marked with affixes, instead roots of words are 
             sequences of consonants (e.g. k-t-b) into which vowels are slotted
             to mark grammatical information (for instance, the word 
-            <em>kitab</em> means <q>book</q>, but the word <em>kutubiyy</em> 
-            is a <q>bookseller</q>; the verb <em>kataba</em> means to write, 
-            but if you conjugate it as <em>'aktuba</em>, it means 
+            &lt;em&gt;kitab&lt;/em&gt; means <q>book</q>, but the word &lt;em&gt;kutubiyy&lt;/em&gt; 
+            is a <q>bookseller</q>; the verb &lt;em&gt;kataba&lt;/em&gt; means to write, 
+            but if you conjugate it as &lt;em&gt;'aktuba&lt;/em&gt;, it means 
             <q>I would write</q>. As can be seen from all these, the vowels are
             inserted into the words almost like a template: the -i-a- fits
-            together with k-t-b to form <em>kitab</em> <q>book</q>. If you 
+            together with k-t-b to form &lt;em&gt;kitab&lt;/em&gt; <q>book</q>. If you 
             want even more examples with this k-t-b root, there is an entire
             Wikipedia page dedicated to it, which you can 
             <a href="https://en.wikipedia.org/wiki/K-T-B">here</a>.
-            </p>
-            <p>
+            &lt;/p&gt;
+            &lt;p&gt;
             Now, let's take the template for making a verbal noun, i--a- and 
-            slot it over the verb s-l-m, meaning <em>to submit</em> (as in 
-            to surrender oneself). We get the word <em>islam</em>.
-            So <em>Islam</em> is the noun meaning <q>submission</q>.
-            </p>
-            <p>
-            As for <em>muslim</em>, this has the prefix <em>m-</em> but works 
+            slot it over the verb s-l-m, meaning &lt;em&gt;to submit&lt;/em&gt; (as in 
+            to surrender oneself). We get the word &lt;em&gt;islam&lt;/em&gt;.
+            So &lt;em&gt;Islam&lt;/em&gt; is the noun meaning <q>submission</q>.
+            &lt;/p&gt;
+            &lt;p&gt;
+            As for &lt;em&gt;muslim&lt;/em&gt;, this has the prefix &lt;em&gt;m-&lt;/em&gt; but works 
             in a similar way. It is actually the active particle of the verb 
-            <em>'aslama</em>, again formed of the s-l-m root and meaning 
-            <q>to submit</q>, so the word <em>muslim</em> translates to 
-            <em>one who is submitting</em>. 
-            </p>
-            <p>
+            &lt;em&gt;'aslama&lt;/em&gt;, again formed of the s-l-m root and meaning 
+            <q>to submit</q>, so the word &lt;em&gt;muslim&lt;/em&gt; translates to 
+            &lt;em&gt;one who is submitting&lt;/em&gt;. 
+            &lt;/p&gt;
+            &lt;p&gt;
             Again there is a Wikipedia page dedicated to this particular 
             root (s-l-m), which you can find 
             <a href="https://en.wikipedia.org/wiki/%C5%A0-L-M">here</a>.
-            </p>
-            <p>
+            &lt;/p&gt;
+            &lt;p&gt;
             The exact origin of this kind of morphology, called
-            <em>nonconcatenative morphology</em> is generally in a sort of 
+            &lt;em&gt;nonconcatenative morphology&lt;/em&gt; is generally in a sort of 
             extreme kind of umlaut, which is then reanalysed and regularised
             into something resembling the above kind of morphology. Umlaut 
             itself generally occurs when strong sounds (generally vowels, such
             as /i/) affect the vowels around themselves. This is how in English
             we have many words where the plural is a difference in vowels, such
-            as <em>foot, feet</em> or <em>man, men</em>. In these cases, the 
-            suffix to mark the plural in West Germanic was an <em>i</em>, so
-            the plural of <em>mann</em> was <em>manni</em>. This <em>i</em> was
-            so strong it affected the <em>a</em>, turning the plural into 
-            <em>menni</em>. From there, because the difference in vowels was
+            as &lt;em&gt;foot, feet&lt;/em&gt; or &lt;em&gt;man, men&lt;/em&gt;. In these cases, the 
+            suffix to mark the plural in West Germanic was an &lt;em&gt;i&lt;/em&gt;, so
+            the plural of &lt;em&gt;mann&lt;/em&gt; was &lt;em&gt;manni&lt;/em&gt;. This &lt;em&gt;i&lt;/em&gt; was
+            so strong it affected the &lt;em&gt;a&lt;/em&gt;, turning the plural into 
+            &lt;em&gt;menni&lt;/em&gt;. From there, because the difference in vowels was
             enough to tell the difference between singular and plural, the 
-            final <em>i</em> got dropped, giving <em>man</em> and 
-            <em>men</em>. As said, the process to form morphology like in 
+            final &lt;em&gt;i&lt;/em&gt; got dropped, giving &lt;em&gt;man&lt;/em&gt; and 
+            &lt;em&gt;men&lt;/em&gt;. As said, the process to form morphology like in 
             Arabic is generally an extreme form of this umlaut, which is then 
             regularised to become the dominant paradigm.
-            </p>
-        <h2>Buddhism</h2>
-            <p>
-            Buddism is quite a simple one - the name comes from <em>buddha</em>
-            , which is from the Sanskrit word <em>buddha</em>, meaning 
-            <em>awakened</em> or <em>enlightened</em>. Tracing the word further
-            back, it comes from a PIE word meaning <em>awake, aware</em>, which
-            made it into English in the form of the words <em>bid</em> (as in,
-            to bid at an auction) and <em>bode</em>. Hence, a word like 
-            <em>forboding</em> comes from <em>forebode</em>, or being aware 
-            (<em>bode</em>) of something in advance (<em>fore</em>, as in
+            &lt;/p&gt;
+        &lt;h2&gt;Buddhism&lt;/h2&gt;
+            &lt;p&gt;
+            Buddism is quite a simple one - the name comes from &lt;em&gt;buddha&lt;/em&gt;
+            , which is from the Sanskrit word &lt;em&gt;buddha&lt;/em&gt;, meaning 
+            &lt;em&gt;awakened&lt;/em&gt; or &lt;em&gt;enlightened&lt;/em&gt;. Tracing the word further
+            back, it comes from a PIE word meaning &lt;em&gt;awake, aware&lt;/em&gt;, which
+            made it into English in the form of the words &lt;em&gt;bid&lt;/em&gt; (as in,
+            to bid at an auction) and &lt;em&gt;bode&lt;/em&gt;. Hence, a word like 
+            &lt;em&gt;forboding&lt;/em&gt; comes from &lt;em&gt;forebode&lt;/em&gt;, or being aware 
+            (&lt;em&gt;bode&lt;/em&gt;) of something in advance (&lt;em&gt;fore&lt;/em&gt;, as in
             before).
-            </p>
-            <p>
-            Another somewhat interesting thing about the word <em>buddha</em> 
+            &lt;/p&gt;
+            &lt;p&gt;
+            Another somewhat interesting thing about the word &lt;em&gt;buddha&lt;/em&gt; 
             is the word for Buddha in several East Asian languages. For 
             instance, in Japanese, the word for Buddha is quite different:
-            <em>Hotoke</em>, or <em>Hotoke-sama</em> with the honorific.
-            This in turns comes from Old Japanese <em>potoke</em>, from 
-            Proto-Korean most likely <em>*Pwutukye</em>. The <em>pwutu</em>
+            &lt;em&gt;Hotoke&lt;/em&gt;, or &lt;em&gt;Hotoke-sama&lt;/em&gt; with the honorific.
+            This in turns comes from Old Japanese &lt;em&gt;potoke&lt;/em&gt;, from 
+            Proto-Korean most likely &lt;em&gt;*Pwutukye&lt;/em&gt;. The &lt;em&gt;pwutu&lt;/em&gt;
             comes from the same origin as Buddha, namely Sanskrit (albeit 
             through Chinese, which is partly responsible for the odd form). 
-            The <em>kye</em> part is probably a similar honorific to Japanese 
-            <em>sama</em>, meaning something like <q>lord</q>, but it might 
-            also be from the Chinese word <em>ke</em>, or <q>spirit</q>, as in,
+            The &lt;em&gt;kye&lt;/em&gt; part is probably a similar honorific to Japanese 
+            &lt;em&gt;sama&lt;/em&gt;, meaning something like <q>lord</q>, but it might 
+            also be from the Chinese word &lt;em&gt;ke&lt;/em&gt;, or <q>spirit</q>, as in,
             the spirit of Buddha.
-            </p>
-        <h2>Sikhism and Hinduism</h2>
-            <p>
+            &lt;/p&gt;
+        &lt;h2&gt;Sikhism and Hinduism&lt;/h2&gt;
+            &lt;p&gt;
             After this, the final two major religions, Hinduism and Sikhism, 
             have fairly simple etymologies that you may expect. Sikhism 
-            naturally comes from <em>Sikh</em> comes from a word <em>sikkha</em>,
+            naturally comes from &lt;em&gt;Sikh&lt;/em&gt; comes from a word &lt;em&gt;sikkha&lt;/em&gt;,
             which originally meant <q>teaching, instruction</q>, relating to a 
-            word meaning <q>student</q>. <em>Hindu</em> is ultimate from the 
-            same word where the word <em>India</em> came from, which is 
-            <em>sindhu</em> in Sanskrit. This originally meant <q>river</q>, 
-            and is relating to the Indus River. The <em>s</em> sound at the 
-            beginning became <em>h</em> due to a common sound change, s > h, 
-            and the word became <em>hindhu</em>. From here we get Hindu, and 
-            when the word was passed along to Greek, the <em>h</em> at the 
-            beginning was lost giving us <em>Indos</em>, or <em>India</em>.
-            </p>
-        <h2>Conclusion</h2>
-            <p>
+            word meaning <q>student</q>. &lt;em&gt;Hindu&lt;/em&gt; is ultimate from the 
+            same word where the word &lt;em&gt;India&lt;/em&gt; came from, which is 
+            &lt;em&gt;sindhu&lt;/em&gt; in Sanskrit. This originally meant <q>river</q>, 
+            and is relating to the Indus River. The &lt;em&gt;s&lt;/em&gt; sound at the 
+            beginning became &lt;em&gt;h&lt;/em&gt; due to a common sound change, s > h, 
+            and the word became &lt;em&gt;hindhu&lt;/em&gt;. From here we get Hindu, and 
+            when the word was passed along to Greek, the &lt;em&gt;h&lt;/em&gt; at the 
+            beginning was lost giving us &lt;em&gt;Indos&lt;/em&gt;, or &lt;em&gt;India&lt;/em&gt;.
+            &lt;/p&gt;
+        &lt;h2&gt;Conclusion&lt;/h2&gt;
+            &lt;p&gt;
             Whilst this is only the etymology of the most common religions out 
             there, there are obviously many more. As you may have imagined, 
             names from religions tend to come from several sources, such as 
@@ -318,11 +318,11 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
             Islam, 'enlightened' as the description of Buddha) or the 
             nationality or geography (Hindu for instance). There are many other 
             smaller religions as well, each of which can have fairly 
-            interesting etymologies as well (<em>Taoism</em> comes from a word
-            meaning 'the way', where this <em>tao</em> element is related to
-            the <em>to</em> in Shin<em>to</em>ism, which means 'the way of the 
+            interesting etymologies as well (&lt;em&gt;Taoism&lt;/em&gt; comes from a word
+            meaning 'the way', where this &lt;em&gt;tao&lt;/em&gt; element is related to
+            the &lt;em&gt;to&lt;/em&gt; in Shin&lt;em&gt;to&lt;/em&gt;ism, which means 'the way of the 
             gods') but I have kept it to the major religions for brevity. 
-            </p>
+            &lt;/p&gt;
     </description>
 
     <!-- Item -->
@@ -333,59 +333,59 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
 			<!-- <pubDate></pubDate> -->
 			<guid>https://gabbott.dev/blog/s-r-germanic</guid>
 			<description>
-		<!-- Add content here in <p> blocks -->
+		<!-- Add content here in &lt;p&gt; blocks -->
 		<!-- Written 2021-11-08 -->
-		<p>
+		&lt;p&gt;
 		The /s/ and /r/ phonemes in Germanic have some quite interesting 
 		alternation between languages that you may not have even noticed.
-		</p> <p>
-		For instance, in German, the word to be, <i>sein</i>, is conjugated
-		in the past tense with an /r/: <i>war, warst, waren</i>, but in 
-		the past participle this /r/ somehow turns to an s (/z/): <i>gewesen</i>.
-		And in Dutch, the same verb <i>zijn</i> cannot make up its mind: <i>ik was</i>
-		becomes <i>wij waren</i> in the plural, and then the participle 
-		goes back to having an s: <i>ik ben geweest</i>. In fact, the same 
-		happens in English if you think about it: I <em>was</em>, but you
-		<em>were</em>. </p> <p>
-		A similar phenomenon happens in English. We have <i>lose</i> and 
-		<i>lost</i>, but then we have the word <i>forlorn</i>. Similarly in
-		Dutch, the word for lose is <i>verliezen</i>, which then somehow 
-		becomes <i>verloor</i> in the past tense. But then in German, we 
-		have <i>verlieren</i> and <i>verloren</i> where both have /r/. What
+		&lt;/p&gt; &lt;p&gt;
+		For instance, in German, the word to be, &lt;i&gt;sein&lt;/i&gt;, is conjugated
+		in the past tense with an /r/: &lt;i&gt;war, warst, waren&lt;/i&gt;, but in 
+		the past participle this /r/ somehow turns to an s (/z/): &lt;i&gt;gewesen&lt;/i&gt;.
+		And in Dutch, the same verb &lt;i&gt;zijn&lt;/i&gt; cannot make up its mind: &lt;i&gt;ik was&lt;/i&gt;
+		becomes &lt;i&gt;wij waren&lt;/i&gt; in the plural, and then the participle 
+		goes back to having an s: &lt;i&gt;ik ben geweest&lt;/i&gt;. In fact, the same 
+		happens in English if you think about it: I &lt;em&gt;was&lt;/em&gt;, but you
+		&lt;em&gt;were&lt;/em&gt;. &lt;/p&gt; &lt;p&gt;
+		A similar phenomenon happens in English. We have &lt;i&gt;lose&lt;/i&gt; and 
+		&lt;i&gt;lost&lt;/i&gt;, but then we have the word &lt;i&gt;forlorn&lt;/i&gt;. Similarly in
+		Dutch, the word for lose is &lt;i&gt;verliezen&lt;/i&gt;, which then somehow 
+		becomes &lt;i&gt;verloor&lt;/i&gt; in the past tense. But then in German, we 
+		have &lt;i&gt;verlieren&lt;/i&gt; and &lt;i&gt;verloren&lt;/i&gt; where both have /r/. What
 		is happening here?
-        </p>
-        <p>
+        &lt;/p&gt;
+        &lt;p&gt;
 		The answer lies in two important sound changes that occurred in 
 		the history of Germanic - the most important here being 
-		<em>Verner's Law</em>. The other one, which you may have even 
-		heard of, is <em>Grimm's Law</em> (named after Jacob Grimm, who 
+		&lt;em&gt;Verner's Law&lt;/em&gt;. The other one, which you may have even 
+		heard of, is &lt;em&gt;Grimm's Law&lt;/em&gt; (named after Jacob Grimm, who 
 		is the same person who wrote the fairy tales).
-        </p>
-        <p>
+        &lt;/p&gt;
+        &lt;p&gt;
 		Grimm's Law showed a set of correspondences in sounds between 
 		German (and other Germanic languages) and other Indo-European 
 		languages, such as Latin and Greek for instance. For example, 
-		Latin <em>p</em> corresponds a lot of the time to a Germanic 
-		<em>f</em>: Latin <em>pes</em> and Greek <em>pous</em>, compared
-		with English <em>foot</em>. Or Latin <em>piscis</em> compared with
-		English <em>fish</em>. I'm sure if you think about it there will be 
+		Latin &lt;em&gt;p&lt;/em&gt; corresponds a lot of the time to a Germanic 
+		&lt;em&gt;f&lt;/em&gt;: Latin &lt;em&gt;pes&lt;/em&gt; and Greek &lt;em&gt;pous&lt;/em&gt;, compared
+		with English &lt;em&gt;foot&lt;/em&gt;. Or Latin &lt;em&gt;piscis&lt;/em&gt; compared with
+		English &lt;em&gt;fish&lt;/em&gt;. I'm sure if you think about it there will be 
 		many more you notice.
-		</p>
-		<p>The full list of correspondences is quite long, but for some
+		&lt;/p&gt;
+		&lt;p&gt;The full list of correspondences is quite long, but for some
 		more examples:
-		</p>
+		&lt;/p&gt;
 		<ul>
 		    <li>p -> f (as in the examples above)</li>
-		    <li>t -> þ (for instance, Latin <em>tres</em> and English <em>three</em>)</li>
-		    <li>k -> h (for instance, Latin <em>canis</em> and English <em>hound</em>)</li>
-		    <li>d -> t (Latin <em>decem</em> and English <em>ten</em>)</li>
+		    <li>t -> þ (for instance, Latin &lt;em&gt;tres&lt;/em&gt; and English &lt;em&gt;three&lt;/em&gt;)</li>
+		    <li>k -> h (for instance, Latin &lt;em&gt;canis&lt;/em&gt; and English &lt;em&gt;hound&lt;/em&gt;)</li>
+		    <li>d -> t (Latin &lt;em&gt;decem&lt;/em&gt; and English &lt;em&gt;ten&lt;/em&gt;)</li>
 		</ul>
-		<p>
+		&lt;p&gt;
 		So how does Verner's Law come into this? And how does this explain
 		s and r? After all, none of these changes above feature s at all, 
 		let alone r.
-		</p>
-		<p>
+		&lt;/p&gt;
+		&lt;p&gt;
 		The problem is that Grimm's Law does not explain everything. There
 		are unfortunately exceptions to Grimm's Law, which causes a bit of 
 		a problem for linguistics, especially those who want to appear 
@@ -393,75 +393,75 @@ exactly is true? I don't know. I will likely never know. C'est la vie.
 		act like his theory explains everything, when in reality he is 
 		just picking and choosing the parts where his theory works and 
 			using that as "evidence" that he is correct.
-		</p>
-		<p> 
+		&lt;/p&gt;
+		&lt;p&gt; 
 		And so to explain these exceptions, Karl Verner came along and 
 		proposed a new sound change that meant that the sounds did not 
-		just change into one sound, but two! So <em>p</em> for instance 
+		just change into one sound, but two! So &lt;em&gt;p&lt;/em&gt; for instance 
 		could change into one of /ɸ/ (f) or /β/ (v) depending on the 
 		situation.
-		</p>
-		<p>
+		&lt;/p&gt;
+		&lt;p&gt;
 		The main conditioning factor for this change is stress. So in the 
-		case of two very common words, for instance <em>Vater</em> and
-		<em>Bruder</em> where the t or d sound ideally be the same
+		case of two very common words, for instance &lt;em&gt;Vater&lt;/em&gt; and
+		&lt;em&gt;Bruder&lt;/em&gt; where the t or d sound ideally be the same
 		according to Grimm's Law (because the PIE forms both have a /t/:
 		bʰréh₂tēr (meaning brother) and ph₂tḗr (meaning father)) so as in
 		the sound changes I listed above, these should both have a /þ/. But
 		it is clear that the fact that the German forms have different 
 		sounds - /t/ and /d/, means that they would have not both had
 		a /þ/, but must have had different sounds there.
-		</p>
-		<p>
+		&lt;/p&gt;
+		&lt;p&gt;
 		As can be seen in the above PIE forms though, the stress is 
 		different (in PIE, stress is marked with a acute accent). And so 
 		because of this difference in stress, the resulting forms end up
 		with different sounds.
-		</p>
-		<p>
+		&lt;/p&gt;
+		&lt;p&gt;
 		Where /s/ and /r/ come into it, are because Verner's Law also
 		affected /s/. It is worth pointing out that /s/ was not actually 
 		affected by Grimm's Law, but it is by Verner's Law. This caused 
 		the /s/ sound to alternate with a /z/ sound. And the final piece 
 		of the puzzle is that /z/ underwent a process called 
-		<em>rhoticisation</em>, where a sound becomes rhotic, or r-like.
+		&lt;em&gt;rhoticisation&lt;/em&gt;, where a sound becomes rhotic, or r-like.
 		And so /s/ and /r/ ended up weirdly alternating in a lot of 
-		Germanic languages, causing these weird cases where <em>was</em>
-		becomes <em>were</em>, or where you are <em>lost</em> in English
-		but <em>verloren</em> in German.
-		</p>
-		<p>
+		Germanic languages, causing these weird cases where &lt;em&gt;was&lt;/em&gt;
+		becomes &lt;em&gt;were&lt;/em&gt;, or where you are &lt;em&gt;lost&lt;/em&gt; in English
+		but &lt;em&gt;verloren&lt;/em&gt; in German.
+		&lt;/p&gt;
+		&lt;p&gt;
 		The final piece of the puzzle is a process called
-		<em>levelling</em>. Languages often undergo a regularisation, where
+		&lt;em&gt;levelling&lt;/em&gt;. Languages often undergo a regularisation, where
 		odd or irregular, or generally difficult to remember paradigms 
 		become more regular. In fact, I am sure you can think of some 
 		examples of levelling you have heard in your day-to-day life: 
-		people might say they <em>swelled</em>as the past tense of
-		<em>swell</em> (as opposed to <em>swoll</em>) and many examples of 
+		people might say they &lt;em&gt;swelled&lt;/em&gt;as the past tense of
+		&lt;em&gt;swell&lt;/em&gt; (as opposed to &lt;em&gt;swoll&lt;/em&gt;) and many examples of 
 		this have occurred in say, the transition from older forms of 
-		English to modern-day English: we speak of <em>cows</em> not 
-		<em>kine</em>, and some are partway through transition: we may 
-		varyingly say <em>octopusses</em> or <em>octopi</em>, instead of 
-		<em>octopodes</em>.
-		</p>
-		<p> 
+		English to modern-day English: we speak of &lt;em&gt;cows&lt;/em&gt; not 
+		&lt;em&gt;kine&lt;/em&gt;, and some are partway through transition: we may 
+		varyingly say &lt;em&gt;octopusses&lt;/em&gt; or &lt;em&gt;octopi&lt;/em&gt;, instead of 
+		&lt;em&gt;octopodes&lt;/em&gt;.
+		&lt;/p&gt;
+		&lt;p&gt; 
 		So in this case, the irregular variation between s and r was 
-		levelled in a lot of cases to be a <em>bit</em> more regular. 
+		levelled in a lot of cases to be a &lt;em&gt;bit&lt;/em&gt; more regular. 
 		Taking lose as an example, in English we levelled it all to /s/
 		(lose, lost) whereas in German they levelled it all to /r/ 
 		(verlieren, verloren). In Dutch, they did not level it completely, 
-		and ended up with the present tense <em>verliezen</em> and the 
-		past tense <em>verloren</em>. A similar thing happened with all
-		the other examples: in English, <em>was</em> and <em>were</em> 
+		and ended up with the present tense &lt;em&gt;verliezen&lt;/em&gt; and the 
+		past tense &lt;em&gt;verloren&lt;/em&gt;. A similar thing happened with all
+		the other examples: in English, &lt;em&gt;was&lt;/em&gt; and &lt;em&gt;were&lt;/em&gt; 
 		did not undergo levelling, but in German they did, yielding 
-		<em>war</em> and <em>waren</em>. But the past participle in 
-		German did not get levelled, giving <em>gewesen</em>.
-		</p>
-		<p> 
+		&lt;em&gt;war&lt;/em&gt; and &lt;em&gt;waren&lt;/em&gt;. But the past participle in 
+		German did not get levelled, giving &lt;em&gt;gewesen&lt;/em&gt;.
+		&lt;/p&gt;
+		&lt;p&gt; 
 		As a side note, the commoner a word is, the less likely it is 
 		to be levelled. This is because the levelled form is used more 
 		often and so is more likely to be corrected.
-		</p>
+		&lt;/p&gt;
     			</description>
 		</item>
 	</channel>
