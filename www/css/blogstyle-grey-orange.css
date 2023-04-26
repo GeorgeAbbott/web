@@ -1,5 +1,30 @@
+/* set variables */
+:root {
+	--background-color: #151515; 
+	--text-color: #ffeedd;
+	--h1-color: #fda553;
+	--h2-color: #ffa500;
+	--h3-color: #ffa500;
+	--primary-color: purple;
+}
+
+/* dark mode colours */
+@media (prefers-color-scheme: light) {
+	:root { 
+		--background-color: #fff; 
+		--text-color: #111;
+		--primary-color: cornflowerblue;
+		--h1-color: #fda553;
+		--h2-color: #ffa500;
+		--h3-color: #ffa500;
+		--primary-color: purple;
+	}
+}
+
+
 body {
-    background-color: #151515;
+
+    background-color: var(--background-color);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -8,27 +33,36 @@ body {
 }
 
 h1 {
-    color: #fda553;
-    text-shadow: 2px 2px black;
+    color: var(--h1-color);
+    /* text-shadow: 2px 2px black; */
     font-family: serif;
     font-size: 16 px;
     text-align: center;
 }
 
 h2 {
-    color: #ffa500;
-    text-shadow: 1px 1px black;
+    color: var(--h2-color);
+    /* text-shadow: 1px 1px black; */
     font-family: serif;
     text-align: left;
 }
 
+.h2 {
+	color: var(--h2-color);
+	text-align: left;
+}
+
+.h3 {
+	color: var(--h3-color);
+}
+
 h3 {
-    color: #ffa500;
+    color: var(--h3-color);
     font-family: serif;
 }
 
-p {
-    color: #ffeedd;
+p, code, q {
+    color: var(--text-color);
     margin-left: 20px;
     margin-right: 20px;
     text-align: left;
@@ -36,7 +70,7 @@ p {
 
 /* For Tables */
 li, ul, ol, table, th {
-    color: #ffeedd;
+    color: var(--text-color);
     /* margin-left: 20px; */  
     /* margin-right: 20px;*/ 
     text-align: left;
