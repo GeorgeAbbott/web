@@ -44,16 +44,18 @@ h2 {
     color: var(--h2-color);
     /* text-shadow: 1px 1px black; */
     font-family: serif;
-    text-align: left;
 }
 
 .h2 {
 	color: var(--h2-color);
-	text-align: left;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .h3 {
 	color: var(--h3-color);
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 h3 {
