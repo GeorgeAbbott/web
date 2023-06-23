@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Closelang: Hello, World!</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Hello, World! in the Close programming language</h1>
+<!-- bct:beg -->
+<p>Jumping straight into it, here is the code for Hello World:</p>
+<pre><code>
+main: fn: i32
+    print "Hello, World!"
+end
+</code></pre>
+
+<p>
+This looks rather clean, but benefits from a few hidden features which I shall 
+go over here. In general, Close strives (will strive) to not have much in the 
+way of hidden gotchas, but some convenience things are provided, detailled below.
+</p>
+
+<p>
+Firstly, you can notice the syntax is <code>identifier: keyword</code>. This use 
+of the identifier first, before a type name, etc. is consistent throughout the 
+language. 
+</p>
+
+<p>
+Secondly, the <code>fn</code> keyword is used to introduce a function. It 
+consists of brackets after the <code>fn</code>, which can be omitted if there 
+are no parameters. If they are, they are in <code>name: type</code> format. For 
+instance, an alternative way of writing the <code>main</code> function is:
+</p>
+<pre><code>main: fn(args: []str): i32</code></pre>
+<p>
+With the <code>args</code> parameter. The return type is given after another
+colon. 
+</p>
+<p>
+The <code>print</code> function is declared in <code>std.io</code>, but is 
+re-exported in <code>std.prelude</code>, a special module that is included in 
+every file, unless <code>do not import std.prelude</code> is given. <code>print</code>
+takes a string which can contain format specifiers in <code>{}</code>, and 
+then any amount of further parameters (variadic arguments). For instance:
+</p>
+<pre><code>
+print "Hello, {}, and goodbye {}.", "Tom", "Mike"
+</code></pre>
+<p>
+As can be seen, brackets do not need to be used on functions unless it is 
+unclear. 
+TODO: continue... 
+</p>
+<!-- bct:end -->
+</body>

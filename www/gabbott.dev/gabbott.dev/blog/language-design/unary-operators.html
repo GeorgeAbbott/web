@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Unary Operators</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Unary Operators</h1>
+<!-- bct:beg -->
+<p>
+There are, across languages, very few unary operators. The major ones are:
+</p>
+
+<ol>
+	<li>Unary minus, to negate a value <code>-</code></li>
+	<li>Unary plus, to... <a href="https://stackoverflow.com/questions/18889028/a-positive-lambda-what-sorcery-is-this">
+			convert a lambda to a function pointer?</a></li>
+	<li>Increment <code>++</code> and decrement <code>--</code></li>
+	<li>Negation, i.e. <code>not</code> and bitwise negation <code>~</code></li>
+	<li>The addressof operator, i.e. <code>&amp;</code></li>
+	<li>The pointer dereference operator, i.e. <code>*</code>, in C</li>
+	<li><code>sizeof</code></li>
+</ol>
+
+<p>
+When designing a language, instead of adding special parsing for unary
+operators, we could get rid of all of these using a function instead.
+
+<p>
+For instance:
+</p>
+<ul>
+	<li>Unary minus: instead of <code>-1</code>, do <code>negate(1)</code></li>
+	<li>Unary plus: get rid of it. Even in C, it only does conversions, and
+		we shouldn't be doing conversions in this way.</li>
+	<li>Increment, decrement: Use <code>preincrement(10)</code>,
+		<code>postdecrement(9)</code>, etc.
+	</li>
+	<li>Addressof: either <code>addrof</code> function (like C++
+		<code>std::addressof</code>, or <code>&amp;</code> as a
+		function name (see <a href="https://gabbott.dev/blog/language-design/identifiers">Identifiers</a>,
+		potentially with <a href="https://gabbott.dev/blog/language-design/implicit-brackets">
+			Implicit Brackets</a>
+	</li>
+	<li>Pointer deference: same as with <code>addressof</code>. Either
+		<code>deref</code> function, or </code>*</code> as a function
+		name.
+	</li>
+</ul>
+
+<p>
+All in all, it seems a good idea to strike unary operators from the core
+language altogether. 
+</p>
+<!-- bct:end -->
+</body>

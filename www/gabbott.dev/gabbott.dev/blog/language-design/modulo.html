@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Modulo</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Modulo</h1>
+<!-- bct:beg -->
+<p>
+The modulo operator is surprisingly difficult - for more information on this, I
+recommend watching <a href="https://invidio.us/watch?v=xVNYurap-lk">this
+video</a> for details about C++ and several other languages as well as 
+<a href="https://en.wikipedia.org/wiki/Modulo">the Wikipedia page</a> - when
+designing a language, we want to ensure both that 1) the user knows and
+understands exactly what behaviour (Euclidian, truncated, floored, rounded, ...), 
+will be used when running the <code>mod</code> function, and 2) that the code
+remains as clear as possible.
+
+<h3>First Things First: Stop using <code>mod</code></h3>
+<p>
+If using <code>mod</code> is so problematic, then the first thing we want to do 
+is get the user of our language to <em>stop using <code>mod</code>!</em>.
+</p>
+
+<p>
+For instance, a very common use case of <code>mod</code> is in a function to 
+check whether an integer is even or odd:
+</p>
+<pre><code>
+is_odd: fn(n: i32): bool
+	=&gt;n % 2 == 1
+</code></pre>
+
+<p>
+We just want the user not to implement this. If the language has <code>mod</code>
+where the return has the signed of the dividend, then this will not work. So 
+we should have an <code>is_odd</code> method implemented by default on our 
+integral types.
+</p>
+
+<h3>Possible Behaviours</h3>
+<p>
+<!-- Write about the different behaviours -->
+</p>
+
+<h3>Solution</h3>
+<p>
+The user should opt in to the behaviour he wants. If he just wants the 
+remainder (generally the case), he can use the rounded version rem(). If he
+wants the truncated version, he can use mod(). The best way I belive would be 
+to define a <code>rem</code> function which does:
+</p>
+
+<pre><code>
+rem: fn(v: integral): integral
+	=&gt;mod(v, ModBehaviour.Rounded)
+</code></pre>
+
+<p>
+Then define <code>mod</code> as taking a mandatory second argument, which is an 
+enum of the behaviour to use. Therefore, the user <em>has</em> to know what 
+behaviour they want, and is more likely to research into it if they do not know.
+</p>
+
+<!-- bct:end -->
+</body>
