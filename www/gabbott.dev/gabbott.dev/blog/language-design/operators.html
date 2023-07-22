@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang=en>
-<head>
-    <meta charset="utf-8">
-    <title>Zen and the Art of Motorcycle Maintenance</title>
-    <link rel="stylesheet" href="./css/blogstyle.css">
-</head>
-
-
-<body>
+<html lang="en">
+	<head>
+		<title>Operators</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
 
     <!-- nbbeg:ver0 -->
 <!-- navbar: 2023-02-01 -->
@@ -50,16 +47,40 @@
 	</div>
 </div>
     <!-- nbend:ver0 -->
-    
-        <!-- Page Content -->
-        <center><header><h1> Zen and the Art of Motorcycle Maintenance Review </h1></header></center>
 
-        <!-- Add information here -->
-		<p> 
+<body>
+<h1>Operators</h1>
 
+<p>
+Thanks to the function oriented design, a lot of operators can actually just be 
+functions instead. We will list them here with the operators though. 
+</p>
+<!-- bct:beg -->
+<table>
+	<tr>
+		<th>Operator</th>
+		<th>Usage</th>
+	</tr>
 
-        </p>
+	<tr>
+		<th>+, -, /, *, %, %%, &gt;&gt;, &lt;&lt;, bitand, bitor,
+			bitxor</th>
+		<th>Actually defined as infix functions, e.g. <code>add aka
+				`+`</code>; <code>mod aka `%`</code>, etc.</th>
+	</tr>
 
-	</body>
-</html>
+	<tr>
+		<th>=, +=, -=, /=, *=, %=, %%=</th>
+		<th>Assignment operators. <code>=</code> is an actual operator,
+			the rest are functions defined in terms of that
+			operator.</th>
+	</tr>
 
+	<tr>
+		<th>==, !=, &lt;=, &gt;=, &lt;, &gt;</th>
+		<th>As functions, e.g. <code>eq</code>.</th>
+	</tr>
+
+</table>
+<!-- bct:end -->
+</body>
