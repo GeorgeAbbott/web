@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pointers</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/pictures">Pictures</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Pointers</h1>
+<!-- bct:beg -->
+<p>
+Between C pointers (<code>T*</code>) and C++ or Rust references
+(<code>T&amp;</code>), there is little change except for the nullability. For
+this reason, stick to just one. I will stick to the term pointer for now. 
+</p>
+
+<p>
+The re-use of the <code>*</code> operator for both pointer dereference and
+declaring a pointer type is confusing for newcomers: for this reason, I will
+use the syntax <code>^T</code> to declare the type (similar to Pascal) and, 
+<a href="https://gabbott.dev/blog/language-design/unary-operators">to avoid
+adding a unary operator</a> use a function, <code>valueat</code>, to do
+pointer dereference.
+</p>
+
+<pre><code>
+main: fn(args: []str): i32 
+    let x = 10
+    let ptr_to_x: ^i32 = addrof(x)
+    valueat(ptr_to_x) += 32
+    print(valueat(ptr_to_x))
+</code></pre>
+
+<p>
+There are some parts of the above code that look like they could yield bugs,
+but we can design around these:
+</p>
+
+<ol>
+	<li>What happens if we forget to write <code>valueof</code> when
+		assigning to <code>x</code> through <code>ptr_to_x</code> on
+		line 3? This will get caught, because <code>ptr_to_x</code> is
+		of type <code>^i32</code>, and operations, e.g. addition will
+		not be supported on pointer types. Instead, we make these
+		available through explicitely named functions, e.g. <code>increment_ptr(p: ^T,
+		n: size)</code>.
+	</li>
+</ol>
+
+<p>
+A pointer should make clear where it can be <code>null</code>. For this
+purpose, we can use <code>Optional</code>: </code>Optional[^T]</code> is an 
+optional (nullable) pointer to T. Sugar is provided for this as with all
+nullables: <code>^?T</code> can be used. Or an alias
+<code>NullablePtr[T]</code> can be provided. 
+</p>
+
+<!-- bct:end -->
+</body>

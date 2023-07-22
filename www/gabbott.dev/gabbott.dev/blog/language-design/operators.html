@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Operators</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"testlinks
+			<i class="fa fa-caret down">General</i>
+		</button>
+		<div class="dropdown-content center-text">
+		<a href="https://gabbott.dev/">Homepage</a>
+			<a href="https://gabbott.dev/aboutme">About Me</a>
+			<a href="https://gabbott.dev/contact">Contact</a>
+		</div>
+	</div>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<!-- Blogs -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"miscdd
+			<i class="fa fa-caret down center-text">Writing</a>
+			</button>
+			<div class="dropdown-content center-text">
+				<a href="https://gabbott.dev/blog">Blog</a>
+				<a href="https://gabbott.dev/pictures">Pictures</a>
+				<a href="https://gabbott.dev/rd">Reading</a>
+				<a href="https://gabbott.dev/links">Web Links</a>
+			</div>
+	</div>
+</div>
+    <!-- nbend:ver0 -->
+
+<body>
+<h1>Operators</h1>
+
+<p>
+Thanks to the function oriented design, a lot of operators can actually just be 
+functions instead. We will list them here with the operators though. 
+</p>
+<!-- bct:beg -->
+<table>
+	<tr>
+		<th>Operator</th>
+		<th>Usage</th>
+	</tr>
+
+	<tr>
+		<th>+, -, /, *, %, %%, &gt;&gt;, &lt;&lt;, bitand, bitor,
+			bitxor</th>
+		<th>Actually defined as infix functions, e.g. <code>add aka
+				`+`</code>; <code>mod aka `%`</code>, etc.</th>
+	</tr>
+
+	<tr>
+		<th>=, +=, -=, /=, *=, %=, %%=</th>
+		<th>Assignment operators. <code>=</code> is an actual operator,
+			the rest are functions defined in terms of that
+			operator.</th>
+	</tr>
+
+	<tr>
+		<th>==, !=, &lt;=, &gt;=, &lt;, &gt;</th>
+		<th>As functions, e.g. <code>eq</code>.</th>
+	</tr>
+
+</table>
+<!-- bct:end -->
+</body>
