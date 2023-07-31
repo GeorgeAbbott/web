@@ -2,7 +2,7 @@ server {
 
 	server_name origin.gabbott.dev ;
 
-    return 301 https://git.gabbott.dev/self;
+    return 301 https://git.gabbott.dev/george;
 
 
     listen [::]:443 ssl; # managed by Certbot
