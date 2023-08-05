@@ -79,7 +79,7 @@ can be compared, but does not implement <code>comparable</code>. For instance,
 this code:
 </p>
 
-<pre><code>
+<textarea cols="59" rows="10" readonly class="codeblock">
 func cmp[T comparable](a, b T) bool {
 	return a == b
 }
@@ -89,19 +89,19 @@ func main() {
 	var y any = 10
 	fmt.Printf("%v == %v =&gt; %v", x, y, cmp(x, y))
 }
-</code></pre>
+</textarea>
 
 <p>does not work, giving the error <code>any does not implement
 comparable</code>. But, 
 </p>
 
-<pre><code>
+<textarea cols="59", rows="6" readonly class="codeblock">
 func main() {
 	var x any = 10
 	var y any = 10
 	fmt.Printf("%v == %v =&gt; %v", x, y, x == y)
 }
-</code></pre>
+</textarea>
 
 <p>
 works just fine. Why? The best answer seems to be that <code>any</code>
@@ -134,14 +134,12 @@ worse is the choice of error handling: instead of Rust style
 which means you have to remember to check the error with:
 </p>
 
-<pre>
-<code>
+<textarea readonly rows="5" cols="29" class="codeblock">
 val, err := function()
 if err != nil {
 	// handle the error
 }
-</code>
-</pre>
+</textarea>
 
 <p>
 The problem of course being that you have to <em>remember</em> to handle the 
