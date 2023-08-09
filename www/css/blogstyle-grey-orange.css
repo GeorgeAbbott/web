@@ -122,6 +122,12 @@ li, ul, ol, table, th {
 	font-weight: normal;
 }
 
+/* TODO: add a better fix where ol, ul, li have separate CSS from table, th.
+ */
+ol, ul {
+	font-size: 0.80em; 
+}
+
 .header, th {
 	text-decoration: underline;
 }
