@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>comp: First Foray into Custom ROMs and Rooting</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=rust&amp;skin=sunburst"></script>
+	<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+    <!-- nbend:ver0 -->
+
+	<body>
+		<center>
+			<header><h1> Multiple Mutable References to Container in Rust: My Struggle against Borrowck</h1></header>
+
+            <h3>Note: this page requires JavaScript to print code blocks correctly</h3>
+
+			<!-- Add content here in <p> blocks -->
+            <p>
+            I decided to make a copy of Pokemon Ruby in Rust, and so set about 
+            making a rough start. I decided to go with a "state stack" idea, 
+            where each part of the game is managed with a state, and there is a 
+            stack (or in my case, <code>Vec</code>) of states. Additionally, I 
+            was using <code>ggez</code> library to help me. So in Rust, we 
+            can create a trait for States:
+            </p>
+
+        <pre class="prettyprint align-left">
+        trait State: ggez::graphics::Drawable {
+            fn update(&amp;mut self, _ctx: &amp;Context);
+        }
+        </pre>
+
+            <p>
+            And then we can have a <code>Stack</code>, that just holds a <code>Vec</code>
+            of <code>Stack</code>s and has a couple of functions for adding 
+            and removing <code>State</code>s from the stack.
+            </p>
+            
+            <pre class="prettyprint align-left">
+            pub struct Stack {
+                states: Vec&lt;Box&lt;dyn State&gt;&gt;
+            }
+
+            impl Stack {
+                pub fn new() -> Stack {
+                    Stack {
+                        states: Vec::new(),
+                    }
+                }
+
+                pub fn push_state(&mut self, state: Box&lt;dyn State&gt;) {
+                    self.states.push(state);
+                }
+
+                pub fn pop_state(&amp;mut self) -&gt; Box&lt;dyn State&gt; {
+                    self.states.pop().unwrap();
+                }
+            }
+        </pre>
+
+            <p>
+            Simple right? And now just to implement two simple functions, the 
+            <code><em>update()</em></code> and <code><em>draw()</em></code>
+            functions, which should call the respective functions in the states:
+            the draw() function should draw all the states from the first to 
+            the last, and the update() function should <em>only</em> update the 
+            very final state in the stack.
+            </p>
+
+            <pre class="prettyprint align-left">
+            impl State for Stack {
+                fn update(&amp;mut self, ctx: &amp;Context) -&gt; GameResult&lt;()&gt; {
+                    self.states
+                        .last_mut()
+                        .unwrap()
+                        .update(ctx);
+                }
+            }
+
+            impl Drawable for Stack {
+                fn draw(&amp;self, ctx: &amp;mut Context, param: DrawParam) -&gt; GameResult&lt;()&gt; {
+                    for state in &amp;self.states {
+                        state.draw(ctx, param);
+                    }
+               }
+            }
+            </pre>
+
+            <p>
+            This was the code I initially came up with, and my idea was to 
+            implement states as below, with a permanent reference to Stack - 
+            of course, this needed to be a mutable reference, as we would need 
+            the ability to add states. For example, consider the following 
+            test code:
+            </p>
+
+            <pre class="prettyprint align-left">
+            /// A state that can be either Red or Blue.
+            pub struct RbState {
+                color: Color, 
+                stack: &amp;mut Stack,
+            }
+
+            impl RbState {
+                pub fn new() -&gt; RbState {
+                    RbState {
+                        color: Color::RED,
+                    }
+                }
+            }
+
+            impl State for RbState {
+                fn update(&amp;mut self, _ctx: &amp;Context) -&gt; GameResult&lt;()&gt; {
+                    let mut rng = rand::thread_rng();
+                    let throw = rng.gen_range(0..12);
+
+                    if throw &lt; 4 {
+                        self.color == Color::BLUE;
+                    } else if throw &lt; 8 {
+                        self.color == Color::RED;
+                    } else if throw &lt; 12 {
+                        self.stack.push_state(Box::new(GreenState::new()));
+                    }
+                }
+            }
+
+            impl Drawable for RbState { ... }
+
+            pub struct GreenState { ... }
+            impl State for GreenState {
+                fn update(&amp;mut self, _ctx: &amp;Context) -&gt; GameResult&lt;()&gt; {
+                    
+                
+            </pre>
+
+            <p>
+            The above is obviously just test code, but in real code this might 
+            be a TalkingToNpcState pushing a BattleState onto the stack, or 
+            something like that.
+            </p>
+
+            <p>
+            It became apparent to me pretty quickly that this obviously won't 
+            work, so we need some kind of work around. And the first thing that 
+            came to mind was: well why don't I try this <code>Rc&lt;RefCell&lt;T&gt;&gt;</code>
+            that I've heard a lot about? I heard this can allow for multiple 
+            mutable references, so I could use this to get multiple mutable 
+            references to my Stack, right?
+            </p>
+
+            </center><h2> The Problem with <code>Rc&lt;RefCell&lt;Stack&gt;&gt;</code></h2><center>
+            <p>
+            I unfortunately made a terrible mistake when trying to figure out 
+            what <code>Rc&lt;RefCell&lt;T&gt;&gt;</code> does, which is just figuring 
+            it out from what people as opposed to actually reading the docs. I 
+            went ahead and made all of my code <code>Rc&lt;RefCell&lt;T&gt;&gt;</code>'ized.
+            </p>
+
+            <pre class="prettyprint align-left">
+            pub struct Stack {
+                states: Rc&lt;RefCell&lt;Vec&lt;Box&lt;dyn State&gt;&gt;&gt;&gt;,
+            }
+
+            impl State for Stack {
+                fn update(&amp;mut self, ctx: &amp;Context) -&gt; GameResult&lt;()&gt; {
+                    self.states
+                            .borrow_mut()
+                            .update(ctx);
+                }
+            }
+
+            pub struct RbState {
+                color: Color, 
+                stack: Rc&lt;RefCell&lt;Vec&lt;Box&lt;dyn State&gt;&gt;&gt;&gt;,
+            }
+
+            impl RbState {
+                fn update(&amp;mut self, _ctx: &amp;Context) -&gt; GameResult&lt;()&gt; {
+                    ... rest of the code ...
+                    self.stack
+                            .borrow_mut()
+                            .push_state(Box::new(GreenState::new())
+                }
+            }   
+            </pre>
+
+
+
+            <p>
+            And it didn't work.
+            </p>
+
+            <p>
+            As it turns out, the interior mutability of RefCell doesn't let you 
+            have multiple mutable references. It just derefs the checks to 
+            runtime. So in the code above, it doesn't work because we have two 
+            <code>borrow_mut()</code> calls - we need to make the first 
+            <code>borrow_mut</code> because the call to update takes a mutable 
+            reference, and we then need to call the second <code>borrow_mut</code>
+            because we need a mutable reference to the stack to call <code><em>push_state</em></code>.
+            </p>
+
+            <p>
+            So the RefCell solution will not work. I then came up with another 
+            solution after sleeping on it - further solution TBA - what was it?
+            </p>
+
+            <p>
+            TBA - after the solution from above TBA which did not work, then I 
+            came up with the Option solution.
+            </p>
+
+
+            
+            
+
+            
+			
+		</center>
+	</body>
+</html>
