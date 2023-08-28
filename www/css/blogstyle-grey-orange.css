@@ -112,6 +112,15 @@ textarea {
 	font-size: 0.8em;
 }
 
+/***************** withimage - show an image on hover over *******************/
+img {
+	display: none;
+}
+
+.withimage:hover img {
+	display: block;
+}
+
 /***************************** For Tables ************************************/
 li, ul, ol, table, th {
 	font-size: 0.90em;
@@ -144,6 +153,10 @@ tr:hover, th:hover {
 
 .italic {
 	text-decoration: italic ; /* maybe find a better decoration? */
+}
+
+.biblio {
+	font-size: 0.70em;
 }
 
 /************************* Headers and Footers *******************************/
