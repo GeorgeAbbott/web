@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ruby Difficulties</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+		<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+    <!-- nbend:ver0 -->
+
+<h1>Ruby Review</h1>
+<!-- bct:beg -->
+<p>I quite like Ruby as a language. The syntax is nice and pretty. Here are some
+of my complaints when using it. 
+</p>
+
+<h2>Hash Map, Symbols and Strings</h2>
+<p>
+I wanted to write a hash map to match a string to another thing, a "prettier"
+version of the string to display, for my bibliography. So I wrote a hash map
+that had:
+</p>
+
+<textarea readonly class="codeblock">
+transform = {
+  "yet-to-read": "Not yet read",
+  "read": "Completed"
+  # ... and so on
+}
+</textarea>
+<p>Well, this didn't work, and it took me far too long to work out why. Turns
+out, because I was using <code>:</code>, the string was turned into a symbol,
+for instance, <code>:"yet-to-read"</code>. So then, my equality checks for that
+string weren't working, as it was checking a string against a symbol. 
+</p>
+<p>
+The solution is to use the hash-rocket syntax, like so:
+</p>
+<textarea readonly class="codeblock">
+transform = {
+  "yet-to-read" =&gt; "Not yet read",
+  "read" =&gt; "Completed"
+  # ... and so on
+}
+</textarea>
+
+<p>But this is so confusing! I don't get why they have it this way, instead of
+just having the one syntax, or making it explicit to declare symbols, not just
+saying, well, it has a colon so it is a symbol. And in duck-typed languages
+such as Ruby, errors like this go easily missed. I had to sleep on this one,
+because I just couldn't tell why it was happening.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- bct:end -->
