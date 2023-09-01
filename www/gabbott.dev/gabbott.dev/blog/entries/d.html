@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>D is what C++ could have been</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+		<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+	</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text"git
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+    <!-- nbend:ver0 -->
+
+<h1>D is what C++ could have been</h1>
+<!-- bct:beg -->
+<p>
+(Note: this is quite uninformed. I have only been researching D, and have not
+actually used it yet properly. I will write a full review of D once I have used
+it a bit.)
+</p>
+
+<p>
+Both C++ and D started out with the aim of being a better C, bringing more
+modern features to the C language. But D has done such a better job of it than
+C++ it looks like.
+</p>
+
+<p>
+C++ has regular revisions with new features - in C++20 (only recently!) the
+language got modules (though no compiler implements them yet) and in C++23 they
+only just got the <code>print</code> function! A nice reprieve from
+<code>std::cout &lt;&lt; my_string &lt;&lt; std::endl;</code>. But how long has
+it taken to get even these incredibly basic things?
+</p>
+
+<p>
+D has all of this, and more. The nice features of C - templates, C-like
+syntax and interop, everything, all there. If you want GC, it's there - or
+don't, and use the C based <code>malloc</code> and <code>free</code> functions,
+though sadly this won't call the ctors/dtors like C++ <code>new</code> and
+<code>delete</code>. Modules? Already got 'em. UTF-8 strings? D has them. UFCS?
+D has it. A distinction between in and out parameters, as opposed to using
+<code>const std::string&amp;</code> all the time? D has it.
+</p>
+
+<p>
+Essentially, D is a better C++. It is actually a bit simpler, too, compared
+with the mess that is C++ lvalues and rvalue references and xvalues and the
+hundreds of abbreviations. 
+</p>
+
+<p>
+I think I will give D a try in a project sometime, and see how it fares.
+Really, the only thing C++ has over it is maturity, it seems to me.
+</p>
+<!-- bct:end -->
