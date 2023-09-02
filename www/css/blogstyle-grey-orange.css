@@ -1,6 +1,7 @@
 /* dark mode colours */
 :root {
 	--background-color: #151515; 
+	--slightly-different-bg: #202020; /* for use in biblio table */
 	--text-color: #ffeedd;
 	--text-contrast: #112244;
 	/* Main contrast colours, i.e. orange. */
@@ -20,12 +21,15 @@
 @media (prefers-color-scheme: light) {
 	:root { 
 		--background-color: #fff; 
+		--slightly-different-bg: #eee;
 		--text-color: #111;
 		--h1-color: #fda553;
 		--h2-color: #ffa500;
 		--h3-color: #ffa500;
 		--primary-color: cornflowerblue;
-		--code-block-color: #888888;
+		-button-hover: cornflowerblue;
+		--code-block-color: #bbbbbb;
+		-button-entry: #cacaca;
 		/* For dark mode it is swapped. */
 		--white: #000000;
 		--highlighted-bg: #dedbef;
@@ -157,6 +161,12 @@ tr:hover, th:hover {
 
 .biblio {
 	font-size: 0.70em;
+	border-bottom: 1px solid;
+	border-collapse: collapse;
+}
+
+tr:nth-child(even) .biblio-tr {
+	/* background-color: var(--slightly-different-bg); */
 }
 
 /************************* Headers and Footers *******************************/
