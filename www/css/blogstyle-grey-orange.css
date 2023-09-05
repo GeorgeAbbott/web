@@ -117,7 +117,7 @@ textarea {
 }
 
 /***************** withimage - show an image on hover over *******************/
-img {
+.withimage img {
 	display: none;
 }
 
