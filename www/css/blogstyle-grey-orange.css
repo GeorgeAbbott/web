@@ -23,13 +23,14 @@
 		--background-color: #fff; 
 		--slightly-different-bg: #eee;
 		--text-color: #111;
+		--text-contrast: #ffeebb;
 		--h1-color: #fda553;
 		--h2-color: #ffa500;
 		--h3-color: #ffa500;
 		--primary-color: cornflowerblue;
-		-button-hover: cornflowerblue;
+		--button-hover: cornflowerblue;
 		--code-block-color: #bbbbbb;
-		-button-entry: #cacaca;
+		--button-entry: #cacaca;
 		/* For dark mode it is swapped. */
 		--white: #000000;
 		--highlighted-bg: #dedbef;
@@ -125,48 +126,65 @@ textarea {
 	display: block;
 }
 
-/***************************** For Tables ************************************/
-li, ul, ol, table, th {
+/****************************** For Lists ************************************/
+li, ul, ol {
 	font-size: 0.90em;
 	color: var(--text-color);
 	/* margin-left: 20px; */  
 	/* margin-right: 20px;*/ 
 	text-align: left;
 	border-spacing: 0.19em 0.12em;
+	border-radius: 4.5em; 
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-family: sans-serif;
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
 	font-weight: normal;
 }
 
-/* TODO: add a better fix where ol, ul, li have separate CSS from table, th.
- */
 ol, ul {
 	font-size: 0.80em; 
 }
 
-.header, th {
-	text-decoration: underline;
-}
-
-tr {
-	border-bottom: 1px solid var(--white);
-}
-
-tr:hover, th:hover {
-	background-color: var(--highlighted-bg); 
-	color: var(--highlighted-fg);
-}
-
-.italic {
-	text-decoration: italic ; /* maybe find a better decoration? */
-}
-
-.biblio {
-	font-size: 0.70em;
-	border-bottom: 1px solid;
+/***************************** For Tables ************************************/
+table, .biblio {
+	font-size: 0.80em;
+	color: var(--text-color);
+	text-align: left;
+	border-spacing: 0.19em 0.12em;
+	border-radius: 2.5em; 
 	border-collapse: collapse;
+	margin: 25px 0;
+	font-family: sans-serif;
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
+	font-weight: normal;
+	min-width: 400px;
+	white-space: nowrap;
 }
 
-tr:nth-child(even) .biblio-tr {
-	/* background-color: var(--slightly-different-bg); */
+/* Apply to both header and rows */
+th, td {
+	padding: 8px 10px;
+}
+
+/* Header */
+.header tr, thead tr, th {
+	background-color: var(--primary-color);
+	color: var(--text-contrast);
+}
+
+/* Table rows */
+tr {
+	border-bottom: thin solid var(--white);
+	background-color: var(--background-color);
+}
+
+tr:nth-of-type(even) {
+	background-color: var(--slightly-different-bg);
+}
+
+tr:last-of-type {
+	border-bottom: 2px solid var(--primary-color);
 }
 
 /************************* Headers and Footers *******************************/
