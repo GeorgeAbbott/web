@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>I Love Debugging</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/now">Now</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text">
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+    <!-- nbend:ver0 -->
+
+<!-- Written 2023-10-01, in a fit of passion from a debugging session. -->
+<h1>I Love Debugging</h1>
+<!-- bct:beg -->
+<body>
+<p>
+I have spent about five hours today trying to debug an issue on Artix (btw)
+where for some reason my seat management was not working - I would boot up
+<code>startx</code> or <code>Hyprland</code>, and I would receive an
+error, that libseat could not find a seat.
+</p>
+
+<p>
+Why? 
+</p>
+
+<p>
+Well, turns out the seat is managed by elogind (which I probably should have
+known...) and so I thought, it's a problem with elogind. Maybe it was
+accidentally getting confused between seatd and elogind? I add
+<code>LIBSEAT_BACKEND=logind</code> to my <code>/etc/environment</code>,
+definitely now using elogind, definitely not working.
+</p>
+
+<p>
+I managed to still find a way to run things. First, log in as my default user
+(user 1000), then <code>su root</code>. For some reason, I can now run
+<code>startx</code>, and it runs as root, but "as sah" also, given that
+<code>XDG_RUNTIME_DIR</code> is <code>/run/user/1000</code>. 
+</p>
+
+<p>
+Then I realise: when I run <code>loginctl</code>, it gives a bus error - that
+must mean that elogind has a dependency on dbus! So I check for dbus, and see
+that s6 lists the <code>srv</code> and <code>log</code> scripts as running, but
+not dbus itself. I run <code>s6-rc -d change dbus; s6-rc -u change dbus</code>,
+and try log out and then back in again, but it still doesn't work. I even
+<code>rm -rf /run/user</code>, restart elogind, log out of the tty1 (the only
+tty what was logged in, to try simulate a freshly booted system) and log back
+in: no luck. 
+</p>
+
+<p>
+Then I stumble upon 
+<a href="https://forum.artixlinux.org/index.php/topic,3982.0.html">
+this issue
+</a>, 
+and realise what the issue is. <code>s6</code> is not starting dbus and elogind
+at launch. It's not in the default bundle. For some reason, and I don't know
+why, s6 decided to remove these very important programs from the boot.
+</p>
+
+<p>
+WHYYYYYYYYYYY??????????
+</p>
+
+<p>
+Dudemanguy said that the way they updated packages changed earlier in the year
+- and he said that in 2022. I'm not sure why it's suddenly affected me after
+the update now, in late 2023.
+</p>
+
+<p>
+I love you, Linux, never change.
+</p>
+
+<p>
+Though, things like this are probably why the Year of the Linux Desktop(TM) is
+never going to come.
+</p>
+
+<p>
+Also, it's shown me how much I don't know about elogind, dbus, seatd, etc. I
+try to avoid all that stuff really, because it seems complicated to me, but I
+should really try to learn it. 
+<a href="https://github.com/elogind/elogind/issues/25#issuecomment-320619806">This comment</a>
+made it seem as though elogind is really actually quite simple, though I
+imagine even the five things he listed are jobs in themselves. I will make it a
+task one day to learn properly about these uglier parts of a Linux system.
+</p>
+</body>
+<!-- bct:end -->
