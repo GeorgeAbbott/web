@@ -134,11 +134,10 @@ li, ul, ol {
 	/* margin-right: 20px;*/ 
 	text-align: left;
 	border-spacing: 0.19em 0.12em;
-	border-radius: 4.5em; 
+	border-radius: 0.45em; 
 	border-collapse: collapse;
-	margin: 25px 0;
+	margin: 5px 0;
 	font-family: sans-serif;
-	box-shadow: 0 0 20px rgba(0,0,0,0.15);
 	font-weight: normal;
 }
 
