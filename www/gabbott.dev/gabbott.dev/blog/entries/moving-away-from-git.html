@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Moving (The Website) Away from git</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/blogstyle.css">
+	<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+</head>
+
+    <!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/now">Now</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text">
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+    <!-- nbend:ver0 -->
+
+<!-- rss-title: Moving (the website) away from Git -->
+<!-- rss-pubDate: 2023-10-17 -->
+<!-- rss-link: https://gabbott.dev/blog/entries/moving-away-from-git -->
+<!-- rss-guid: link -->
+<!-- Written: 2023-10-17 -->
+<h1>Moving (the website) away from Git</h1>
+<!-- bct:beg -->
+<body>
+<p>
+Since the start of this website, it has been hosted on a Git repo,
+<a href="https://git.gabbott.dev/george/web">here</a>. My workflow is, that I 
+make a change locally, git add/git commit it to the repo, and then a webhook
+detects commits on the repo, and pulls from the repo to a version of the repo
+on the server. Symlinks are set up to point to the relevant directories in the
+right place, and all works hunky dory.
+</p>
+
+<p>
+But, since I have been adding photos, I am noticing a problem with using Git
+repos, which is that they are slow and, well, just bad, for managing photos. I
+could move these out to a CDN, but having some of the web content elsewhere,
+and some on the repo, would half break the reason for having the website in a
+git repo in the first place.
+</p>
+
+<p>
+Another problems comes when making sweeping changes. To change the navbar on my
+website, I have a script which replaces the navbar on all HTML files within the
+webpage. But currently, what I then do is manually add and commit <em>all</em>
+pages on my website, to reflect this updated navbar. That is not a good way to
+do things.
+</p>
+
+<p>
+So, what am I to do?
+</p>
+
+<p>
+Over the next while (I would say few days, but I have other things I want to
+get done this month, so it might take me a little while...), I will transition
+away from using Git to <em>manage</em> the website. This doesn't mean that a
+mirror of the website won't be available on Git, it just means that the
+day-to-day management of the website won't have Git involved in the workflow.
+Honestly, this isn't a particularly dramatic thing, I think probably most
+people do this. I will use (as is common, I believe), <a
+	href="https://wiki.archlinux.org/title/Rsync"><em>rsync</em></a> in order
+to synchronise between the local copy and the copy on the server, a job
+currently done through Git. Then, I can later add/commit/push any changes that
+I have made, independent of the actual uploading the server. This decouples
+these actions - yes, it means I might forget to push to the Git repo any
+changes I've pushed to the server, but that will likely not be a problem if it
+is automated with scripts and the like.
+</p>
+
+<p>
+This will then have several advantages. Firstly, waiting for images to upload
+on Git is <em>slow</em>, as in, painfully slow. This should hopefully make the
+idea of adding images to the webpage better.
+</p>
+
+<p>
+Secondly, it will mean that I don't <em>need</em> to have images bloating up
+the Git repo. I could still have them there, or I could just host the images on
+the server, etc. and save bloating the Git repo. Or... well, I could do
+anything. It's decoupled now, it's free. I don't <em>need</em> to have it all
+together in one big repo, which was the problem initially.
+</p>
+
+<p>
+Thirdly, it means I don't need to use Git. For instance, I could just as well
+have the mirror of the website be on a 
+<a href="https://fossil-scm.org/home/doc/trunk/www/index.wiki">Fossil</a>
+instance, which I do want to try out at some time. Or try out other VCSs,
+mercurial for instance. And again for these, I do not need to have the images
+stored there, bloating out the repo. It will just mirror those parts of the
+website I want it to mirror.
+</p>
+
+<p>
+Fourthly, it should be less fragile. Even though it is self-hosted, when my Git
+server goes down, I can't make changes to the website, because I need to have
+the Git repo to push to. I have sort of gotten around that by also having a
+mirror on Github and Gitlab, but it's far from perfect. If I don't have this
+extra dependency, then all I need is the actual server to copy files to. Easy!
+That is far less likely to go wrong.
+</p>
+
+<p>
+So, that's the plan. I don't know how it took me this long to realise Git was a
+bad idea for actually managing a website anyways. But it somehow did, so I'll
+fix that, and hopefully that will ease my pain with this site a little bit.
+</p>
+</body>
+<!-- bct:end -->
