@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gabbott.dev</title>
+	<link rel="stylesheet" href="./css/blogstyle.css">
+	<script async src="https://analytics.umami.is/script.js" data-website-id="12b77efc-88aa-461c-ba4c-c313e6194fa4"></script>
+</head>
+
+
+<body>
+
+	<!-- nbbeg:ver0 -->
+<!-- navbar: 2023-02-01 -->
+<div class="navbar center-text">
+	<!-- Other TBA -->
+	<a class="nondropbutton center-text" href="https://gabbott.dev">Home</a>
+	<a class="nondropbutton center-text"
+	href="https://gabbott.dev/aboutme">About Me</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/contact">Contact</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/now">Now</a>
+
+	<!-- Git Links -->
+	<div class="dropdown center-text">
+		<button class="dropbtn center-text">
+			<i class="fa fa-caret down center-text">Git</i>
+		</button>
+		<div class="dropdown-content center-text">
+			<a href="https://origin.gabbott.dev">My Git</a>
+			<a href="https://github.gabbott.dev">Github Mirror</a>
+			<a href="https://gitlab.gabbott.dev">Gitlab Mirror</a>
+		</div>
+	</div>
+
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/blog">Blog</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/pictures">Pictures</a>
+	<a class="nondropbutton center-text" 
+		href="https://gabbott.dev/rd">Reading</a>
+	<a class="nondropbutton center-text"
+	   href="https://gabbott.dev/links">Web Links</a>
+</div>
+<!-- nbend:ver0 -->
+	
+<!-- Page Content -->
+<header><h1>This Website</h1></header>
+<p>
+This page details the way that <a href="https://gabbott.dev">this
+website</a> is set up, and how it changes over time.
+</p>
+
+<h2>Present Day</h2>
+<p>
+I'm planning on changing this, so watch this space, but currently, I use a
+Git repo. I make changes locally, hand-editting the HTML, comitting it to the
+Git repo, and pushing it. I have a webhook set up, so that when a new commit is
+pushed the repo, it is automatically pulled into a local folder on the server.
+Then, symlinks are set up the nginx and www folders, which host the webpage.
+</p>
+
+<p>
+I'm planning to <a
+href="https://gabbott.dev/blog/entries/moving-away-from-git">
+move from Git to rsync</a> to sync my website.
+</p>
+
+</body>
+</html>
+
